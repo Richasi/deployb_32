@@ -17,8 +17,8 @@ app.use(express.json());
 
 app.use("/users", userRouter);
  app.use("/posts", auth, postRouter);
-
-app.listen(process.env.PORT, async () => {
+ const PORT = process.env.PORT || 3000;
+app.listen(PORT, async () => {
 
 try{
 
@@ -26,7 +26,7 @@ await connection;
 console.log("Db connected");
 
 console.log("Server running ");
-console.log("server is running at port 8080") 
+console.log(`Server is running on port ${PORT}`);
 }catch (error){ 
     console.log(error.message);
 }
