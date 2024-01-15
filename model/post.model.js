@@ -3,11 +3,11 @@ const mongoose = require("mongoose");
 const postSchema = mongoose.Schema( 
     {
 
-title: {type:String,required:true},
-body: {type:String,required:true},
-device: {type:String,required:true,enum:["PC","Tablet","Mobile"]},
-no_of_comments:{type:Number,required:true},
-userID: {type:String,required:true},
+title: String,
+body: String,
+device: String,
+no_of_comments:Number,
+userID: String,
 
 }
 
